@@ -5,6 +5,10 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 class Employee implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String name;
 	int num;
 	public String getName() {
@@ -33,7 +37,7 @@ public class Serialize {
 
 	public static void main(String[] args) {
 		//object
-		Employee emp= new Employee("yesasvi",1);//creating an object employee and using serialization to convert the object into byte stream
+		Employee emp= new Employee("yesasvi",2);//creating an object employee and using serialization to convert the object into byte stream
 		try {
 			FileOutputStream fout =new FileOutputStream("yesasvi.ser");//creating a file to store the object
 			ObjectOutputStream out = new ObjectOutputStream(fout); //to access the file
